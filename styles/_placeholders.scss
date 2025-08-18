@@ -1,0 +1,22 @@
+@use 'var' as v;
+
+%hover-black {
+   &:hover {
+      cursor: pointer;
+      color: v.$color-black;
+   }
+}
+
+%hover-white {
+   &:hover {
+      cursor: pointer;
+      color: v.$color-white;
+   }
+}
+
+%hover-black-icon {
+   &:hover {
+      cursor: pointer;
+      stroke: v.$color-black;
+   }
+}
