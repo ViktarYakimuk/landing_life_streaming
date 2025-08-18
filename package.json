@@ -1,0 +1,23 @@
+{
+  "name": "page_life_streaming",
+  "version": "1.0.0",
+  "description": "landing_page",
+  "source": "index.html",
+  "scripts": {
+    "sass:watch": "sass --style=expanded --watch styles:dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViktarYakimuk/landing_life_streaming.git"
+  },
+  "author": "Viktar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViktarYakimuk/landing_life_streaming/issues"
+  },
+  "homepage": "https://github.com/ViktarYakimuk/landing_life_streaming#readme",
+  "devDependencies": {
+    "parcel": "^2.15.4",
+    "sass": "^1.90.0"
+  }
+}
