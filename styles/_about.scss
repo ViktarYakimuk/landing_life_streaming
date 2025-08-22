@@ -53,7 +53,7 @@
          position: relative;
          width: 100%;
          height: 500px;
-         padding: 0 0 0 15px;
+         padding: 50px 15px 0 15px;
          @include m.d-flex(end, end, nowrap, column, 0, 0);
          
 
@@ -75,6 +75,90 @@
             line-height: 1.5;
             max-width: 480px;
             @include m.font(20px, 300, v.$color-white);
+         }
+
+         @media (max-width: v.$media_lg) {
+            height: 450px;
+
+            &::before {
+               @include m.position(absolute, -1, -1, top, left, -4px, -83px);
+            }
+         }
+
+         @media (max-width: v.$media_md) {
+            height: 600px;
+            @include m.d-flex(start, end, nowrap, column, 0, 20px);
+            &-title {
+               @include m.font(35px, 400, v.$color-white);
+            }
+
+            &-desc {
+               max-width: 340px;
+               @include m.font(16px, 300, v.$color-white);
+            }
+
+            &::before {
+               @include m.position(absolute, -1, -1, top, left, 100px, -20px);
+               background: url(../assets/img/phone_alpha.webp) 0 0/90% no-repeat;
+               rotate: z 18deg;
+            }
+         }
+      }
+
+      &__approach {
+         position: relative;
+         width: 100%;
+         height: 600px;
+         padding: 0 0 0 15px;
+         
+
+         &::before {
+               content: "";
+               width: 100%;
+               height: 100%;
+               @include m.position(absolute, -1, -1, top, left, 0, 0);
+               background: url(../assets/img/cactus_alpha.webp) 90% 100%/contain no-repeat;
+            }
+
+         &-title {
+            @include m.font(45px, 400, v.$color-white);
+         }
+
+         &-desc {
+            margin: 10px 0 0 0;
+            max-width: 590px;
+            @include m.font(20px, 300, v.$color-white);
+         }
+      
+         @media (max-width: v.$media_xl) {
+            &::before {
+               @include m.position(absolute, -1, -1, top, left, 0, 100px);
+               background: url(../assets/img/cactus_alpha.webp) 90% 100%/350px no-repeat;
+            }
+
+         }
+      
+         @media (max-width: v.$media_md) {
+            &-title {
+            @include m.font(35px, 400, v.$color-white);
+            }
+
+            &-desc {
+               max-width: 500px;
+               @include m.font(16px, 300, v.$color-white);
+            }
+            
+         }
+      
+         @media (max-width: v.$media_sm) {
+            &::before {
+               @include m.position(absolute, -1, -1, top, left, 0, 55px);
+               background: url(../assets/img/cactus_alpha.webp) 90% 100%/350px no-repeat;
+            }
+
+            &-desc {
+               min-width: 320px;
+            }
          }
       }
 
