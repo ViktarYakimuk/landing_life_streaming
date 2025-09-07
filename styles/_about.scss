@@ -3,6 +3,7 @@
 
 .about-section {
    padding: 140px 0 0 0;
+}
 
    .about {
       margin: 0 auto;
@@ -11,7 +12,7 @@
       &__quality {
          width: 100%;
          height: 400px;
-         padding: 0 0 0 15px;
+         padding: 0 0 0 45px;
          background: url(../assets/img/desktop_alpha.webp) 90% 100%/contain no-repeat;
 
          &-title {
@@ -42,10 +43,11 @@
          }
 
          @media (max-width: v.$media_sm) {
+            background: url(../assets/img/desktop_alpha.webp) 150px 100%/400px no-repeat;
             &-desc {
                min-width: 320px;
             }
-            background: url(../assets/img/desktop_alpha.webp) 150px 100%/400px no-repeat;
+            
          }
       }
 
@@ -57,13 +59,14 @@
          @include m.d-flex(end, end, nowrap, column, 0, 0);
          
 
-      &::before {
-         content:"";
-         width: 100%;
-         height: 100%;
-         @include m.position(absolute, -1, -1, top, left, 80px, 0);
-         background: url(../assets/img/phone_alpha.webp) 0 0/contain no-repeat;
-      }
+         &::before {
+            content:"";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            @include m.position(absolute, -1, -1, top, left, 80px, 0);
+            background: url(../assets/img/phone_alpha.webp) 0 0/contain no-repeat;
+         }
 
          &-title {
             @include m.font(45px, 400, v.$color-white);
@@ -83,84 +86,94 @@
             &::before {
                @include m.position(absolute, -1, -1, top, left, -4px, -83px);
             }
+
+         }
+         @media (max-width: v.$media_xl) {
+            &::before {
+               @include m.position(absolute, -1, -1, top, left, 35px, 0);
+            }
+         }
+
+         @media (max-width: v.$media_lg) {
+            height: 450px;
+            &::before {
+               @include m.position(absolute, -1, -1, top, left, -35px, -20px);
+            }
          }
 
          @media (max-width: v.$media_md) {
             height: 600px;
             @include m.d-flex(start, end, nowrap, column, 0, 20px);
-            &-title {
-               @include m.font(35px, 400, v.$color-white);
-            }
 
+            &-title {
+               margin: 50px 0 0 0;
+               @include m.font(32px, 400, v.$color-white);
+            }
+            
             &-desc {
                max-width: 340px;
                @include m.font(16px, 300, v.$color-white);
             }
 
             &::before {
-               @include m.position(absolute, -1, -1, top, left, 100px, -20px);
+               @include m.position(absolute, -1, -1, top, left, 175px, -29px);
                background: url(../assets/img/phone_alpha.webp) 0 0/90% no-repeat;
                rotate: z 18deg;
             }
          }
-      }
+
+         @media (max-width: v.$media_sm) {
+         
+         }
+      
+   }
 
       &__approach {
-         position: relative;
          width: 100%;
-         height: 600px;
+         height: 800px;
          padding: 0 0 0 15px;
-         
-
-         &::before {
-               content: "";
-               width: 100%;
-               height: 100%;
-               @include m.position(absolute, -1, -1, top, left, 0, 0);
-               background: url(../assets/img/cactus_alpha.webp) 90% 100%/contain no-repeat;
-            }
-
+         background: url(../assets/img/cactus_alpha.webp) 90% 100%/contain no-repeat;
+   
          &-title {
+            margin: 200px 0 0 0;
             @include m.font(45px, 400, v.$color-white);
          }
-
+   
          &-desc {
             margin: 10px 0 0 0;
-            max-width: 590px;
+            max-width: 730px;
             @include m.font(20px, 300, v.$color-white);
          }
-      
-         @media (max-width: v.$media_xl) {
-            &::before {
-               @include m.position(absolute, -1, -1, top, left, 0, 100px);
-               background: url(../assets/img/cactus_alpha.webp) 90% 100%/350px no-repeat;
-            }
-
-         }
-      
-         @media (max-width: v.$media_md) {
-            &-title {
-            @include m.font(35px, 400, v.$color-white);
-            }
-
+   
+         @media (max-width: v.$media_lg) {
             &-desc {
                max-width: 500px;
+            }
+         }
+   
+         @media (max-width: v.$media_md) {
+            height: 730px;
+            background: url(../assets/img/cactus_alpha.webp) 99% 100%/320px no-repeat;
+   
+            &-title {
+               margin: 50px 0 0 0;
+               @include m.font(32px, 400, v.$color-white);
+            }
+   
+            &-desc {
+               max-width: 100%;
                @include m.font(16px, 300, v.$color-white);
             }
-            
          }
-      
+   
          @media (max-width: v.$media_sm) {
-            &::before {
-               @include m.position(absolute, -1, -1, top, left, 0, 55px);
-               background: url(../assets/img/cactus_alpha.webp) 90% 100%/350px no-repeat;
+            height: 500px;
+            background: url(../assets/img/cactus_alpha.webp) 99% 100%/220px no-repeat;
+   
+            &-title {
+               margin: 0;
             }
-
-            &-desc {
-               min-width: 320px;
-            }
+   
          }
       }
-
-   }
 }
